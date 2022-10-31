@@ -1,0 +1,15 @@
+.common__section {
+    background: linear-gradient(rgba(0, 32, 60, 0.7), rgba(0, 32, 60, 0.7)),
+        url("../../../assets/bg_page.webp") no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common__section h1 {
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+}

@@ -1,0 +1,86 @@
+.time__count {
+    padding: 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../assets/clock-ba.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.clock__content {
+    padding: 0 80px;
+    text-align: center;
+    color: var(--bg-white);
+}
+
+.clock__wrapper {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.clock__data {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.clock__data-text {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock__data-title {
+    color: var(--bg-white);
+    font-size: 3.8rem;
+}
+
+.clock__data-subtitle {
+    color: var(--bg-white);
+}
+.clock__divi {
+    color: var(--bg-white);
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .clock__data {
+        gap: 1rem;
+    }
+    .clock__wrapper {
+        gap: 1rem;
+    }
+    .clock__data-text {
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .clock__content {
+        padding: 0 40px;
+    }
+    .clock__data-title {
+        font-size: 2.8rem;
+    }
+    .clock__content-title {
+        font-size: 1.5rem;
+    }
+    .clock__content-subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .clock__wrapper {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 582px) {
+    .time__count {
+        display: none;
+    }
+}

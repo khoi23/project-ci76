@@ -1,0 +1,32 @@
+.wishlist__header {
+    background-color: rgba(0, 0, 255, 0.05);
+    padding: 16px;
+    margin-bottom: 2rem;
+}
+
+.wishlist__container h6 {
+    margin: 0;
+}
+
+.wishlist__body {
+    gap: 1rem;
+}
+.wishlist__item {
+    border: 2px solid rgba(0, 0, 0, 0.177);
+    padding: 32px 16px;
+    border-radius: 5px;
+}
+
+.wishlist__img img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.wishlist__item-title {
+    font-size: 1.4rem;
+}
+
+.wishlist__item-price {
+    font-size: 1.2rem;
+}

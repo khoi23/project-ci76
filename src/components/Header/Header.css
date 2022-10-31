@@ -1,0 +1,212 @@
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(33, 34, 69, 0.1);
+
+    background: #fff;
+    transition: 0.3s all ease;
+}
+
+.header__wrapper {
+    height: 80px;
+}
+
+.header__wrapper-logo {
+    width: calc(100% - 82%);
+    object-fit: contain;
+}
+
+.navigation {
+    transition: all 0.7s ease;
+}
+
+.header__wrapper-menu a {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    position: relative;
+
+    padding: 3px 0;
+
+    background: linear-gradient(transparent 0%, transparent 95%, #f75b5b 95%, #f75b5b 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms ease;
+}
+
+.header__wrapper-menu a:hover {
+    color: var(--first-color);
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+.header__wrapper-menu .active__menu {
+    color: var(--first-color) !important;
+}
+
+.header__wrapper-menu__close {
+    display: none;
+}
+
+/* iconnnnnnnn */
+.header__wrapper-cart__icon i,
+.header__wrapper-user__icon i,
+.header__wrapper-favorite__icon i,
+.header__wrapper-mobile__menu i {
+    font-size: 1.5rem;
+    color: #212245;
+    cursor: pointer;
+    transition: 0.1s ease;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+i:hover {
+    background-color: var(--thirsty-color);
+    color: var(--bg-white);
+}
+
+.header__wrapper-cart__icon {
+    position: relative;
+}
+
+.header__wrapper-cart__badge {
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    background: var(--secondary-color);
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.header__wrapper-mobile__menu {
+    font-weight: 600;
+    display: none;
+}
+
+.header__shrink {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 99999;
+    box-shadow: 3px 2px 5px -5px #ffffff;
+}
+
+@media only screen and (max-width: 992px) {
+    .header__wrapper-logo {
+        width: calc(100% - 70%);
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.425);
+        z-index: 99;
+        display: none;
+    }
+
+    .header__wrapper-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        align-items: center;
+        z-index: 999999999;
+        line-height: 20px;
+    }
+
+    .header__wrapper-menu__close {
+        display: block;
+    }
+
+    .header__wrapper-menu a {
+        font-size: 1rem;
+    }
+
+    .header__wrapper-mobile__menu {
+        display: block;
+    }
+
+    .header__wrapper-cart__icon i,
+    .header__wrapper-user__icon i,
+    .header__wrapper-favorite__icon i,
+    .header__wrapper-mobile__menu i {
+        font-size: 1.4rem;
+    }
+
+    .show__menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+        height: 80px;
+    }
+    .header__wrapper-right {
+        gap: 0.5rem !important;
+    }
+}
+
+.header__logined-logo {
+    height: 36px;
+    width: 36px;
+    object-fit: cover;
+    background-color: #212245;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header__logined {
+    position: relative;
+}
+.header__logined__box span{
+    cursor: pointer;
+}
+.header__logined__box {
+    position: absolute;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #bfbfbf;
+    display: none;
+    min-width: 240px;
+}
+
+.showActionsLogin {
+    display: flex;
+}
+
+.header__logined-logo-text {
+    color: var(--bg-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}

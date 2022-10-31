@@ -1,0 +1,67 @@
+.ig__section {
+    margin: 3rem;
+    position: relative;
+}
+
+.ig__section img {
+    height: 360px;
+    width: 360px;
+}
+
+@media only screen and (max-width: 1708px) {
+    .ig__section img {
+        height: 260px;
+        width: 260px;
+    }
+}
+@media only screen and (max-width: 1334px) {
+    .ig-2 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 824px) {
+    .ig-3 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 524px) {
+    .ig-4 {
+        display: none;
+    }
+}
+
+.ri-arrow-left-circle-fill {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    color: aliceblue;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+.ri-arrow-left-circle-fill:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    transform: translate(-50%, -50%) scale(110%);
+}
+.ri-arrow-right-circle-fill {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    color: aliceblue;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+.ri-arrow-right-circle-fill:hover {
+    background-color: transparent;
+    transform: translate(-50%, -50%) scale(110%);
+    color: var(--secondary-color);
+}
+
+.ig__section ul li {
+    width: 28px;
+    height: 28px;
+}

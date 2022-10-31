@@ -1,0 +1,122 @@
+.hero__section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../../assets/s3.webp");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: var(--bg-white);
+}
+
+.hero__title {
+    font-size: 3.6rem;
+    color: var(--bg-white);
+}
+
+.hero__title span {
+    color: var(--first-color);
+    text-shadow: 2px 0 var(--secondary-color), -2px 0 var(--secondary-color), 0 2px var(--secondary-color),
+        0 -2px var(--secondary-color), 1px 1px var(--secondary-color), -1px -1px var(--secondary-color),
+        1px -1px var(--secondary-color), -1px 1px var(--secondary-color);
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+}
+
+.hero__desc {
+    font-size: 1rem;
+}
+
+.hero-btn {
+    border: 1px solid;
+    outline: none;
+    padding: 10px 26px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: transparent;
+    color: var(--bg-white);
+    transition: all 0.3s ease;
+    font-family: "RocknRoll", sans-serif;
+}
+
+.hero-btn:hover {
+    color: var(--bg-white);
+    background-color: var(--first-color);
+    transform: scale(110%);
+}
+
+.hero__service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__service-box {
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__service-box .ri-lg:hover {
+    background: inherit;
+}
+.hero-br {
+    content: "";
+    display: block;
+    height: 20px;
+    width: 2px;
+    background-color: var(--bg-white);
+}
+
+@media only screen and (max-width: 992px) {
+    .hero__section {
+        height: 80vh;
+    }
+    .hero__title {
+        font-size: 2.6rem;
+        color: var(--bg-white);
+    }
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+
+    .hero__desc {
+        font-size: 0.8rem;
+    }
+    .hero-btn {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero__section {
+        height: 60vh;
+    }
+    .hero-br {
+        display: none;
+    }
+
+    .hero__service {
+        display: none;
+    }
+
+    .hero__subtitle {
+        font-size: 0.8rem;
+    }
+    .hero__title {
+        font-size: 2.2rem;
+    }
+}

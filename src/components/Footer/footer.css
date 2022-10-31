@@ -1,0 +1,131 @@
+.footer {
+    padding: 80px 0 40px;
+    background-color: rgb(246, 246, 246);
+}
+
+.footer__logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer__text {
+    font-size: 1.2rem;
+    line-height: 170%;
+    padding-right: 1rem;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__social a i {
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: black;
+}
+.footer__social:hover a i:hover {
+    color: white !important;
+}
+
+.footer__quick-links ul li {
+    background: transparent !important;
+    margin-bottom: 0.5rem;
+}
+
+.footer__quick-links ul li a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 3px 0;
+    background: linear-gradient(transparent 0%, transparent 90%, #ff871d 95%, #ff871d 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 300ms ease;
+}
+
+.footer__quick-links ul li a:hover {
+    color: var(--thirsty-color);
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+.quick-links-title {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+.quick-links-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    width: 30px;
+    background-color: rgb(84, 84, 84);
+}
+
+.link__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.link__social span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link__social span i:hover {
+    color: unset;
+    background-color: unset;
+}
+.link__social p {
+    margin: 0;
+}
+
+.input-group {
+    border-radius: 0;
+    margin-top: 1.5rem;
+    border-bottom: 2px solid rgb(97, 97, 97);
+}
+
+.form-control {
+    border-radius: 0;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: none;
+}
+.input-group .btn {
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    background-color: transparent;
+    color: rgb(60, 60, 60);
+    padding: 0;
+}
+
+input::placeholder {
+    color: rgb(97, 97, 97) !important;
+}
+
+input:focus {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+.input-group .btn i {
+    padding: 20px;
+}
+
+.input-group .btn i:hover {
+    background-color: var(--thirsty-color);
+}
+
+.footer__payment {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
