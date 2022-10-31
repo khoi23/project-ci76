@@ -15,10 +15,10 @@ import ProtectedRoute from "./ProtectedRoute";
 import OrderSucces from "../pages/OrderSucces";
 import AdminDashboard from "../pages/AdminDashboard";
 import WishList from "../pages/WishList";
+import Blog from "../pages/Blog";
+import BlogDetails from "../pages/BlogDetails";
 
 const Routers = () => {
-
-
     return (
         <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
@@ -38,6 +38,8 @@ const Routers = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/favorite" element={<WishList />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:title" element={<BlogDetails />} />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/confirm" element={<OrderSucces />} />

@@ -75,7 +75,9 @@ const Header = () => {
         <motion.header animate={"show"} initial="hidden" className="header" ref={headerRef}>
             <Container>
                 <div className="header__wrapper d-flex align-items-center justify-content-between">
-                    <img src={logo} alt="logo" className="header__wrapper-logo" navigate="/home" />
+                    <Link to={"/home"} className="header__wrapper-logo">
+                        <img src={logo} alt="logo" navigate="/home" />
+                    </Link>
 
                     {/* ======= menu ======= */}
                     <div className="navigation" ref={menuRef}>

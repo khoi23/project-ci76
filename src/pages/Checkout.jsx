@@ -282,13 +282,25 @@ const Checkout = () => {
                                             <h5>
                                                 {val.title} <span>x{val.cartQuantity}</span>
                                             </h5>
-                                            <h6>${val.price * val.cartQuantity}</h6>
+                                            <h6>
+                                                $
+                                                {(val.price * val.cartQuantity).toLocaleString(undefined, {
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2,
+                                                })}
+                                            </h6>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="checkout__totals-box">
                                     <h6>SUBTOTAL:</h6>
-                                    <h5>${totalAMount}</h5>
+                                    <h5>
+                                        $
+                                        {totalAMount.toLocaleString(undefined, {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        })}
+                                    </h5>
                                 </div>
                                 <div className="checkout__totals-box">
                                     <h6>SHIPPING:</h6>
@@ -300,11 +312,23 @@ const Checkout = () => {
                                 </div>
                                 <div className="checkout__totals-box">
                                     <h6>VAT (20%):</h6>
-                                    <h5>${(totalAMount * 20) / 100}</h5>
+                                    <h5>
+                                        $
+                                        {((totalAMount * 20) / 100).toLocaleString(undefined, {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        })}
+                                    </h5>
                                 </div>
                                 <div className="checkout__totals-box-end">
                                     <h6>TOTAL:</h6>
-                                    <h5>${totalAMount - 2 + (totalAMount * 20) / 100}</h5>
+                                    <h5>
+                                        $
+                                        {(totalAMount - 2 + (totalAMount * 20) / 100).toLocaleString(undefined, {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        })}
+                                    </h5>
                                 </div>
                             </div>
                             <div className="checkout__confirm">

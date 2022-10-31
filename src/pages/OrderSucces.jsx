@@ -91,7 +91,13 @@ const OrderSucces = () => {
                                                 {val.title}
                                                 <span>x{val.cartQuantity}</span>
                                             </h5>
-                                            <h6>${val.price}</h6>
+                                            <h6>
+                                                $
+                                                {val.price.toLocaleString(undefined, {
+                                                    minimumFractionDigits: 2,
+                                                    maximumFractionDigits: 2,
+                                                })}
+                                            </h6>
                                         </div>
                                     ))}
                                 </div>

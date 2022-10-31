@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Col, Tooltip } from "reactstrap";
 
 import "./product.css";
@@ -26,6 +26,7 @@ const ProductCard = ({
 }) => {
     const dispatch = useDispatch();
     const [cartQuantity, setCartQuantity] = useState(1);
+    const navigate = useNavigate();
 
     const onAddToCart = () => {
         const item = {
@@ -47,6 +48,8 @@ const ProductCard = ({
             image01,
         };
         dispatch(setAddItemToWishList(item));
+    };    const onView = () => {
+        navigate(`/products/${_id}`);
     };
 
     const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -76,7 +79,7 @@ const ProductCard = ({
                             </Tooltip>
                             <i className="ri-add-line ri-xl" id="ToolAddToCart"></i>
                         </span>
-                        <span className="product__icon product__icon-view">
+                        <span className="product__icon product__icon-view" onClick={onView}>
                             <Tooltip isOpen={tooltipOpenView} target="ToolView" toggle={toggleView}>
                                 View
                             </Tooltip>
@@ -96,7 +99,9 @@ const ProductCard = ({
                     </Link>
                     <div className="product__price">
                         {priceLong && <del>${priceLong} USD</del>}
-                        <span>${price} USD</span>
+                        <span>
+                            ${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                        </span>
                     </div>
 
                     <div className="product__rating">

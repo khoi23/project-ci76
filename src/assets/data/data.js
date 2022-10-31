@@ -18,7 +18,7 @@ const product = [
         _id: "01",
         title: "Chicken Burger",
         priceLong: 23,
-        price: 21,
+        price: 41,
         rating: 3.4,
         numOfReviews: 120,
         image01: "/images/1.jpg",

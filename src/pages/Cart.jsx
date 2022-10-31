@@ -160,7 +160,7 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className="cart__checkOut">
-                                    <Link to={"/checkout"} className="btn btn__continue">
+                                    <Link to={"/products"} className="btn btn__continue">
                                         Continue shopping
                                     </Link>
                                     <Link to={"/checkout"} className="btn">
@@ -230,7 +230,9 @@ const Tr = (props) => {
                     {title} <span>(Size: M, Dough: PAN)</span>
                 </div>
             </th>
-            <th className="cart__price cart__price-tbody">${price}</th>
+            <th className="cart__price cart__price-tbody">
+                ${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            </th>
             <th className="cart__quantity">
                 <div className="cart__quantity-box">
                     <i className="ri-subtract-line ri-xl" onClick={onDecreaseItem}></i>
@@ -238,7 +240,13 @@ const Tr = (props) => {
                     <i className="ri-add-line ri-xl" onClick={onIncreaseItem}></i>
                 </div>
             </th>
-            <th className="cart__subprice">${price * cartQuantity}</th>
+            <th className="cart__subprice">
+                $
+                {(price * cartQuantity).toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                })}
+            </th>
             <th className="cart__delete">
                 <i className="ri-delete-bin-line ri-xl" onClick={onRemoveItem}></i>
             </th>

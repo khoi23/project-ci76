@@ -185,8 +185,24 @@ const ProductDetail = () => {
                                     )}
                                 </div>
                                 <div className="product__price">
-                                    {priceLong && <del>${priceLong} USD</del>}
-                                    <span>${price} USD</span>
+                                    {priceLong && (
+                                        <del>
+                                            $
+                                            {priceLong.toLocaleString(undefined, {
+                                                minimumFractionDigits: 2,
+                                                maximumFractionDigits: 2,
+                                            })}{" "}
+                                            USD
+                                        </del>
+                                    )}
+                                    <span>
+                                        $
+                                        {price.toLocaleString(undefined, {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        })}{" "}
+                                        USD
+                                    </span>
                                 </div>
                                 <hr />
                                 <p className="product__desc">{description}</p>

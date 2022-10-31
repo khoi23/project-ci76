@@ -70,7 +70,7 @@ const WishList = () => {
                                     </Row>
                                 </div>
 
-                                <div>
+                                <div className="mt-4">
                                     <button className="btn" onClick={onClearToggle}>
                                         Clear Wishlist
                                     </button>
@@ -124,7 +124,9 @@ const Tr = (props) => {
                     <h6 className="wishlist__item-title">{title}</h6>
                 </Col>
                 <Col lg="2">
-                    <h6 className="wishlist__item-price">${price}</h6>
+                    <h6 className="wishlist__item-price">
+                        ${price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    </h6>
                 </Col>
                 <Col lg="2">
                     <motion.button
